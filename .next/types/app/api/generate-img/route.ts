@@ -1,4 +1,4 @@
-// File: C:\Users\Az\Desktop\FauroAi\app\api\generate-img\route.js
+// File: C:\Users\Az\Desktop\F\app\api\generate-img\route.js
 import * as entry from '../../../../../app/api/generate-img/route.js'
 import type { NextRequest } from 'next/server.js'
 

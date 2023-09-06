@@ -1,4 +1,4 @@
-// File: C:\Users\Az\Desktop\FauroAi\app\login\page.jsx
+// File: C:\Users\Az\Desktop\F\app\login\page.jsx
 import * as entry from '../../../../app/login/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

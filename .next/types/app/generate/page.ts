@@ -1,4 +1,4 @@
-// File: C:\Users\Az\Desktop\FauroAi\app\generate\page.jsx
+// File: C:\Users\Az\Desktop\F\app\generate\page.jsx
 import * as entry from '../../../../app/generate/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
