@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Poppins:wght@400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Poppins;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.noSelect:focus {
+  outline: none !important;
+}
+
+.ImageHolder {
+  background-image: url("../public/images/Astro.jpg");
+}
+
+.orange_gradient {
+  @apply text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text;
+}
+.purple_gradient {
+  @apply text-transparent bg-gradient-to-r from-purple-300 via-purple-700 to-purple-500 bg-clip-text;
+}

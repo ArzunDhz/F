@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/layout",{
+
+/***/ "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CNavBar.jsx&modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CProvider.jsx&modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CThemeProvider.jsx&server=false!":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CNavBar.jsx&modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CProvider.jsx&modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CThemeProvider.jsx&server=false! ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+eval(__webpack_require__.ts("Promise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/NavBar.jsx */ \"(app-pages-browser)/./components/NavBar.jsx\"));\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/Provider.jsx */ \"(app-pages-browser)/./components/Provider.jsx\"));\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./components/ThemeProvider.jsx */ \"(app-pages-browser)/./components/ThemeProvider.jsx\"))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtZmxpZ2h0LWNsaWVudC1lbnRyeS1sb2FkZXIuanM/bW9kdWxlcz1DJTNBJTVDVXNlcnMlNUNBeiU1Q0Rlc2t0b3AlNUNGYXVyb0FpJTVDY29tcG9uZW50cyU1Q05hdkJhci5qc3gmbW9kdWxlcz1DJTNBJTVDVXNlcnMlNUNBeiU1Q0Rlc2t0b3AlNUNGYXVyb0FpJTVDY29tcG9uZW50cyU1Q1Byb3ZpZGVyLmpzeCZtb2R1bGVzPUMlM0ElNUNVc2VycyU1Q0F6JTVDRGVza3RvcCU1Q0ZhdXJvQWklNUNjb21wb25lbnRzJTVDVGhlbWVQcm92aWRlci5qc3gmc2VydmVyPWZhbHNlISIsIm1hcHBpbmdzIjoiQUFBQSx3S0FBNEY7QUFDNUYsNEtBQThGO0FBQzlGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vX05fRS8/N2UzMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiAqLyBcIkM6XFxcXFVzZXJzXFxcXEF6XFxcXERlc2t0b3BcXFxcRmF1cm9BaVxcXFxjb21wb25lbnRzXFxcXE5hdkJhci5qc3hcIik7XG5pbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiAqLyBcIkM6XFxcXFVzZXJzXFxcXEF6XFxcXERlc2t0b3BcXFxcRmF1cm9BaVxcXFxjb21wb25lbnRzXFxcXFByb3ZpZGVyLmpzeFwiKTtcbmltcG9ydCgvKiB3ZWJwYWNrTW9kZTogXCJlYWdlclwiICovIFwiQzpcXFxcVXNlcnNcXFxcQXpcXFxcRGVza3RvcFxcXFxGYXVyb0FpXFxcXGNvbXBvbmVudHNcXFxcVGhlbWVQcm92aWRlci5qc3hcIikiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CNavBar.jsx&modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CProvider.jsx&modules=C%3A%5CUsers%5CAz%5CDesktop%5CFauroAi%5Ccomponents%5CThemeProvider.jsx&server=false!\n"));
+
+/***/ })
+
+});
