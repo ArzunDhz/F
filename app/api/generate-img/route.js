@@ -4,7 +4,7 @@ import { v2 as cloudinary } from "cloudinary";
 import { Image } from "@models/Image";
 var sendImage = "";
 const replicate = new Replicate({
-  auth: "r8_D4rpElQIHDY02AbvKGG726CU3iZTMr52EXJxC",
+  auth: "r8_6MbqvBIVUJ2ew9g7DigtMn2A0oTY4u91oQP6J",
 });
 
 cloudinary.config({
@@ -28,6 +28,7 @@ export const POST = async (req, res) => {
         },
       }
     );
+    console.log(output[0]);
     await cloudinary.uploader.upload(output[0]).then(async (result) => {
       const image = await Image.create({
         image_url: result.url,
