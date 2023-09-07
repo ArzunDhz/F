@@ -31,7 +31,7 @@ export const Review = [
   },
   {
     id: 2,
-    user: "Binam",
+    user: "Arjun",
     rating: ["s", "t", "a", "r"],
     comment:
       "This website is a game-changer! The images it generates are stunning, and the prompts are creative. The pricing is reasonable, and I appreciate the quick customer support. It's become an essential part of my workflow, and I can't recommend it enough.",
