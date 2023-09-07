@@ -4,4 +4,8 @@ node_modules
 # next.js
 .next/
 out/
+<<<<<<< HEAD
 build
+=======
+build
+>>>>>>> cc7eaed982da5abeaf1f20527ba533740bb0cb0f
