@@ -83,7 +83,7 @@ const Generate = () => {
               />
             </div>
             <div className="mt-5 ml-[72px] flex flex-col">
-              <label class="relative inline-flex items-center mr-5 cursor-pointer">
+              <label className="relative inline-flex items-center mr-5 cursor-pointer">
                 <input type="checkbox" value="" className="sr-only peer" />
                 <div
                   onClick={() => {}}
@@ -107,7 +107,7 @@ const Generate = () => {
           {/* search container */}
 
           <form onSubmit={handleSubmit} className=" md:w-[512px]  mt-10">
-            <div class="mb-6 flex justify-center  ">
+            <div className="flex justify-center mb-6 ">
               <input
                 disabled={isloadng}
                 type="text"
@@ -138,7 +138,7 @@ const Generate = () => {
               </div>
             </div>
 
-            <div class="mb-6 flex justify-center ">
+            <div className="flex justify-center mb-6 ">
               <input
                 disabled={negativePrompt || isloadng}
                 type="text"
@@ -177,7 +177,7 @@ const Generate = () => {
                     <>
                       <div className="flex flex-col items-center ">
                         <svg
-                          class="w-10 h-10 text-gray-200 dark:text-gray-600"
+                          className="w-10 h-10 text-gray-200 dark:text-gray-600"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="currentColor"
@@ -239,7 +239,7 @@ const Generate = () => {
                 />
               </div>
               <div className="mt-5 ml-[72px] flex flex-col">
-                <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                <label className="relative inline-flex items-center mr-5 cursor-pointer">
                   <input type="checkbox" value="" className="sr-only peer" />
                   <div
                     onClick={() => {}}
