@@ -3,6 +3,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import "@styles/globals.css";
+import GalleryCard from "@components/GalleryCard";
 const Gallery = () => {
   useEffect(() => {
     const getImageData = async () => {
@@ -12,7 +13,11 @@ const Gallery = () => {
     getImageData();
   }, []);
 
-  return <div>Gallery</div>;
+  return (
+    <>
+      <GalleryCard />
+    </>
+  );
 };
 
 export default Gallery;
