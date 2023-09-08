@@ -15,9 +15,16 @@ cloudinary.config({
 });
 
 export const POST = async (req, res) => {
-  const { prompt, userId, userProfilePic, negativeprompt, userName } =
-    await req.json();
-  console.log(prompt, userId);
+  const {
+    prompt,
+    userId,
+    userProfilePic,
+    negativeprompt,
+    userName,
+    height,
+    width,
+  } = await req.json();
+  console.log(prompt, userId, height, width);
   try {
     const output = await replicate.run(
       "pagebrain/dreamshaper-v7:c180b0a592fe7be34db228e17ab1ddea337af32bd3e297e388be74cb03656583",
@@ -25,8 +32,8 @@ export const POST = async (req, res) => {
         input: {
           prompt,
           negative_prompt: negativeprompt,
-          height: 640,
-          width: 448,
+          height,
+          width,
         },
       }
     );

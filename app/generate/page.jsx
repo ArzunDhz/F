@@ -52,13 +52,16 @@ const Generate = () => {
             <div className="flex flex-col mt-5 space-y-9 4 buttons div">
               <div className="flex justify-evenly ">
                 <button
-                  onClick={setSize()}
+                  onClick={() => setSize({ width: 704, height: 512 })}
                   className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
                 >
-                  512x512
+                  704x512
                 </button>
-                <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                  980x980
+                <button
+                  onClick={() => setSize({ width: 576, height: 1024 })}
+                  className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                >
+                  576x1024
                 </button>
               </div>
               <div className="flex justify-evenly ">
