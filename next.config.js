@@ -9,6 +9,7 @@ const nextConfig = {
       "lh3.googleusercontent.com",
       "avatars.githubusercontent.com",
       "res.cloudinary.com",
+      "lexica.art",
     ],
   },
   webpack(config) {

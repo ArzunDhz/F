@@ -9,8 +9,6 @@ import Loading from "@components/Loading";
 import { CloseIcon, SettingIcon } from "@public/icons";
 
 const Generate = () => {
-  const router = useRouter();
-
   const { data: session, status } = useSession();
   const [genearteImage, setGenerateImage] = useState(null);
   const [isloadng, setLoading] = useState(false);
@@ -19,7 +17,7 @@ const Generate = () => {
   const [negativePromptText, setNegativePromptText] = useState("");
   const [outputSlider, setOutputSlider] = useState(0);
   const [negativePrompt, setNegativePrompt] = useState(true);
-  console.log(session);
+  const [size, setSize] = useState({ width: "512", height: "512" });
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -30,6 +28,8 @@ const Generate = () => {
         userId: session?.user.id,
         userName: session.user.name,
         userProfilePic: session.user.image,
+        width: size.width,
+        height: size.height,
       });
 
       setGenerateImage(data.sendImage);
@@ -51,7 +51,10 @@ const Generate = () => {
             <h1 className="mt-5 text-3xl text-center ">Custom Inputs</h1>
             <div className="flex flex-col mt-5 space-y-9 4 buttons div">
               <div className="flex justify-evenly ">
-                <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
+                <button
+                  onClick={setSize()}
+                  className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                >
                   512x512
                 </button>
                 <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">

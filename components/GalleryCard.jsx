@@ -55,7 +55,7 @@ const GalleryCard = ({
 
   return (
     <>
-      <div className=" relative w-[312px] h-[332px] group  rounded-lg bg-stone-900  text-white ">
+      <div className=" relative max-w-[712px] h-fit group  rounded-lg bg-stone-900  text-white ">
         {/* top section */}
         <div className="absolute w-full transition duration-500 ease-in-out rounded-lg opacity-0 group-hover:opacity-100 bg-gradient-to-b from-black">
           <div className="flex items-center p-2.5 ">

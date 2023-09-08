@@ -20,11 +20,13 @@ export const POST = async (req, res) => {
   console.log(prompt, userId);
   try {
     const output = await replicate.run(
-      "ai-forever/kandinsky-2.2:ea1addaab376f4dc227f5368bbd8eff901820fd1cc14ed8cad63b29249e9d463",
+      "pagebrain/dreamshaper-v7:c180b0a592fe7be34db228e17ab1ddea337af32bd3e297e388be74cb03656583",
       {
         input: {
           prompt,
           negative_prompt: negativeprompt,
+          height: 640,
+          width: 448,
         },
       }
     );
