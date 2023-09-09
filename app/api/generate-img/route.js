@@ -54,6 +54,6 @@ export const POST = async (req, res) => {
     });
     return NextResponse.json({ message: "Success", sendImage });
   } catch (error) {
-    console.log(error.response);
+    console.log(error.response.data);
   }
 };
