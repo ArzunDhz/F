@@ -22,15 +22,19 @@ const Generate = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post("/api/generate-img", {
-        prompt: prompt,
-        negativeprompt: negativePromptText,
-        userId: session?.user.id,
-        userName: session.user.name,
-        userProfilePic: session.user.image,
-        width: size.width,
-        height: size.height,
-      });
+      const { data } = await axios.post(
+        "/api/generate-img",
+        {
+          prompt: prompt,
+          negativeprompt: negativePromptText,
+          userId: session?.user.id,
+          userName: session.user.name,
+          userProfilePic: session.user.image,
+          width: size.width,
+          height: size.height,
+        },
+        { timeout: 10000 }
+      );
 
       setGenerateImage(data.sendImage);
     } catch (error) {
