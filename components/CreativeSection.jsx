@@ -33,6 +33,12 @@ const CreativeSection = () => {
               Create Now
             </button>
           </Link>
+          <Link href={"/gallery"}>
+            {" "}
+            <button className="p-2 mt-2 text-black bg-white shadow-2xl rounded-3xl">
+              Explore Gallery
+            </button>
+          </Link>
         </div>
       </section>
     </>

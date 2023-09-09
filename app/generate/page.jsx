@@ -33,7 +33,7 @@ const Generate = () => {
           width: size.width,
           height: size.height,
         },
-        { timeout: 100000 }
+        { timeout: 1000000 }
       );
 
       setGenerateImage(data.sendImage);

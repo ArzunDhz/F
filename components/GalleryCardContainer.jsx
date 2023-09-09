@@ -57,7 +57,7 @@ const GalleryCardContainer = ({ data, userId }) => {
 
   const addOrRemoveLike = async (userId, imageId) => {
     setIsLoading(true);
-
+    if (!userId) return alert("Must be Logged in");
     const { data } = await axios.put("api/like", { userId, imageId });
     if (data.message === "Liked") {
       setIsLikedOnFrontEnd(true);
