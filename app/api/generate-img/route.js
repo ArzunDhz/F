@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Replicate from "replicate";
 import { v2 as cloudinary } from "cloudinary";
 import { Image } from "@models/Image";
-import OpenAI from "openai";
+
 var sendImage = "";
 const replicate = new Replicate({
   auth: "r8_IIUXxJmBaYiGyVIfiR94pxlJ1BQlO4q4SuTt6",
@@ -25,7 +25,7 @@ export const POST = async (req, res) => {
     height,
     width,
   } = await req.json();
-  console.log(prompt, userId, height, width);
+
   try {
     const output = await replicate.run(
       "pagebrain/dreamshaper-v7:37c0a36ec213848452a7989fa348654cd9cb999df7238e7892488fcbbc4a124d",
@@ -38,7 +38,6 @@ export const POST = async (req, res) => {
         },
       }
     );
-    console.log(output[0]);
 
     await cloudinary.uploader.upload(output[0]).then(async (result) => {
       const image = await Image.create({
@@ -54,6 +53,6 @@ export const POST = async (req, res) => {
     });
     return NextResponse.json({ message: "Success", sendImage });
   } catch (error) {
-    console.log(error.response.data);
+    return NextResponse.status(500).json({ error: "Internal Server Error" });
   }
 };
