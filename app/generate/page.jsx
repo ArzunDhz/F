@@ -17,7 +17,7 @@ const Generate = () => {
   const [negativePromptText, setNegativePromptText] = useState("");
   const [outputSlider, setOutputSlider] = useState(0);
   const [negativePrompt, setNegativePrompt] = useState(true);
-  const [size, setSize] = useState({ width: "512", height: "512" });
+  const [size, setSize] = useState({ width: 512, height: 512 });
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -65,11 +65,17 @@ const Generate = () => {
                 </button>
               </div>
               <div className="flex justify-evenly ">
-                <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                  1024x1024
+                <button
+                  onClick={() => setSize({ width: 576, height: 384 })}
+                  className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                >
+                  576x384
                 </button>
-                <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                  1280x1280
+                <button
+                  onClick={() => setSize({ width: 256, height: 128 })}
+                  className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                >
+                  256x128
                 </button>
               </div>
             </div>
@@ -131,7 +137,10 @@ const Generate = () => {
                   className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"
                 ></div>
                 <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  Negative Prompt
+                  Negative Prompt{" "}
+                  <span className="ml-4 text-pop">
+                    Size:{size.width + "x" + size.height}
+                  </span>
                 </span>
               </label>
               <div
@@ -170,12 +179,12 @@ const Generate = () => {
               </>
             ) : (
               <>
-                <div className="">
+                <div className=" h-[512px] w-[512px] ">
                   {genearteImage ? (
                     <Image
-                      className="rounded-lg "
                       width={512}
                       height={512}
+                      className="w-full h-full "
                       src={genearteImage}
                       alt="generatedimg"
                     />
@@ -213,19 +222,31 @@ const Generate = () => {
 
               <div className="flex flex-col mt-5 space-y-9 4 buttons div">
                 <div className="flex justify-evenly ">
-                  <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                    512x512
+                  <button
+                    onClick={() => setSize({ width: 704, height: 512 })}
+                    className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                  >
+                    704x512
                   </button>
-                  <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                    980x980
+                  <button
+                    onClick={() => setSize({ width: 576, height: 1024 })}
+                    className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                  >
+                    576x1024
                   </button>
                 </div>
                 <div className="flex justify-evenly ">
-                  <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                    1024x1024
+                  <button
+                    onClick={() => setSize({ width: 576, height: 384 })}
+                    className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                  >
+                    576x384
                   </button>
-                  <button className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl">
-                    1280x1280
+                  <button
+                    onClick={() => setSize({ width: 256, height: 128 })}
+                    className="w-[100px] h-12 border-pop border-2 hover:border-white rounded-[10px]  dark:bg-secondary-dark bg-white shadow-xl"
+                  >
+                    256x128
                   </button>
                 </div>
               </div>

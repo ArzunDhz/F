@@ -12,6 +12,8 @@ const ImageSchema = mongoose.Schema({
   },
   creator_img: String,
   creatorName: String,
+  height: String,
+  width: String,
 });
 
 export const Image = models.Image || mongoose.model("Image", ImageSchema);

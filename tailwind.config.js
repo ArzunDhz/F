@@ -21,6 +21,9 @@ module.exports = {
         pop: "#9757FF",
         primary: "#9879CB",
       },
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit,minmax(350px,1fr))",
+      },
     },
   },
 
