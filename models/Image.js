@@ -14,6 +14,7 @@ const ImageSchema = mongoose.Schema({
   creatorName: String,
   height: String,
   width: String,
+  likes: [String],
 });
 
 export const Image = models.Image || mongoose.model("Image", ImageSchema);

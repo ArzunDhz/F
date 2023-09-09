@@ -5,10 +5,17 @@ import {
   LinkdinIcon,
   TwitterIcon,
 } from "@public/icons";
+import axios from "axios";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import * as timeago from "timeago.js";
-const GalleryCardContainer = ({ data }) => {
+
+const GalleryCardContainer = ({ data, userId }) => {
+  const isImageAlreadyLiked = data.likes.includes(userId);
+  const [likeCount, setLikeCount] = useState(data.likes.length);
+  const [isLikedOnFrontEnd, setIsLikedOnFrontEnd] =
+    useState(isImageAlreadyLiked);
+  const [isloading, setIsLoading] = useState(false);
   const widthHeightRatio = data.height / data.width;
   const galleryHeight = Math.ceil(350 * widthHeightRatio);
   const photoSpans = Math.ceil(galleryHeight / 10) + 1;
@@ -47,6 +54,25 @@ const GalleryCardContainer = ({ data }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const addOrRemoveLike = async (userId, imageId) => {
+    setIsLoading(true);
+
+    const { data } = await axios.put("api/like", { userId, imageId });
+    if (data.message === "Liked") {
+      setIsLikedOnFrontEnd(true);
+    } else {
+      setIsLikedOnFrontEnd(false);
+    }
+
+    if (isLikedOnFrontEnd) {
+      setLikeCount((prev) => prev - 1);
+    } else {
+      setLikeCount((prev) => prev + 1);
+    }
+    setIsLoading(false);
+  };
+
   return (
     <>
       <div
@@ -82,22 +108,27 @@ const GalleryCardContainer = ({ data }) => {
         {/* like portion */}
         <div className="absolute top-0 right-[-15px] z-10 transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
           <div className="flex  items-center  flex-col p-2.5 ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="white"
-              className="w-12 h-12 cursor-pointer"
+            <button
+              disabled={isloading}
+              onClick={() => addOrRemoveLike(userId, data._id)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill={isLikedOnFrontEnd ? "red" : "none"}
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke={isLikedOnFrontEnd ? "red" : "white"}
+                className="w-12 h-12 cursor-pointer"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </button>
 
-            <h1 className="text-lg font-bold tracking-wider">1</h1>
+            <h1 className="text-lg font-bold tracking-wider">{likeCount}</h1>
           </div>
         </div>
 

@@ -27,22 +27,6 @@ export const POST = async (req, res) => {
   } = await req.json();
   console.log(prompt, userId, height, width);
   try {
-    // const openai = new OpenAI();
-    // const output = await openai.images.generate({
-    //   prompt,
-    // });
-
-    // console.log(output);
-
-    // const output = await replicate.run(
-    //   "stability-ai/sdxl:da77bc59ee60423279fd632efb4795ab731d9e3ca9705ef3341091fb989b7eaf",
-    //   {
-    //     input: {
-    //       prompt: "An astronaut riding a rainbow unicorn",
-    //     },
-    //   }
-    // );
-    // console.log(output);
     const output = await replicate.run(
       "pagebrain/dreamshaper-v7:37c0a36ec213848452a7989fa348654cd9cb999df7238e7892488fcbbc4a124d",
       {

@@ -28,7 +28,6 @@ const handler = NextAuth({
         await connectToDB();
         const user = await User.findOne({ email: profile.email });
         if (user) {
-          console.log(user);
           return true;
         }
 
