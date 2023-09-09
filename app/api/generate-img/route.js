@@ -53,6 +53,6 @@ export const POST = async (req, res) => {
     });
     return NextResponse.json({ message: "Success", sendImage });
   } catch (error) {
-    return NextResponse.status(500).json({ error: "Internal Server Error" });
+    return NextResponse.status(500).json({ erroris: error });
   }
 };
