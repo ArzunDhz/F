@@ -4,9 +4,11 @@ import { useSession } from "next-auth/react";
 import "@styles/globals.css";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import axisoRetry from "axios-retry";
 import Image from "next/image";
 import Loading from "@components/Loading";
 import { CloseIcon, SettingIcon } from "@public/icons";
+import axiosRetry from "axios-retry";
 
 const Generate = () => {
   const { data: session, status } = useSession();
@@ -18,6 +20,8 @@ const Generate = () => {
   const [outputSlider, setOutputSlider] = useState(0);
   const [negativePrompt, setNegativePrompt] = useState(true);
   const [size, setSize] = useState({ width: 512, height: 512 });
+
+  axiosRetry(axios, { retries: 3 });
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
