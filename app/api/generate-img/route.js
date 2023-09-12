@@ -15,6 +15,10 @@ cloudinary.config({
   secure: true,
 });
 
+export const config = {
+  runtime: 'edge'
+}
+
 export const POST = async (req, res) => {
   const {
     prompt,
