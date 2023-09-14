@@ -16,9 +16,6 @@ cloudinary.config({
 });
 
 
-export const config = {
-runtime:'experimental-edge';
-}
 export const POST = async (req, res) => {
   const {
     prompt,
